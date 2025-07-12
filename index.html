@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,98 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>aprenDAVIolão - Aulas de Violão para Iniciantes</title>
   <style>
+    /* Reset e base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f7ede2, #e0c3fc);
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #f7ede2 0%, #e0c3fc 100%);
       color: #3e3e3e;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     header {
-      background: linear-gradient(to right, #4e342e, #795548);
-      color: #fff;
-      padding: 40px 20px;
+      background: linear-gradient(90deg, #4e342e 0%, #795548 100%);
+      color: white;
+      padding: 50px 20px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
     header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 4px #00000044;
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
     }
     header p {
-      font-size: 1.2em;
-      margin: 0;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
     main {
-      padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 40px 30px;
     }
-    section {
-      margin-bottom: 40px;
+    section + section {
+      margin-top: 50px;
     }
     h2 {
       color: #5d4037;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #795548;
+      padding-bottom: 8px;
     }
     p {
-      line-height: 1.8;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #4a3c30;
+    }
+    strong {
+      color: #6d4c41;
     }
     .contact {
-      background-color: #fbe9e7;
-      padding: 25px;
-      border-radius: 12px;
+      background: #fbe9e7;
+      padding: 30px 25px;
+      border-radius: 14px;
+      box-shadow: inset 0 0 10px #d7b89c;
     }
     form {
       display: flex;
       flex-direction: column;
     }
-    input,
-    textarea {
-      padding: 14px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
+    input, textarea {
+      padding: 15px 18px;
+      margin-bottom: 15px;
+      border: 1.8px solid #c59f86;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #7b5742;
+      box-shadow: 0 0 8px #a57c6e88;
     }
     button {
-      padding: 14px;
       background-color: #6d4c41;
       color: white;
-      font-size: 16px;
+      padding: 16px 0;
+      font-size: 1.2rem;
+      font-weight: 600;
       border: none;
+      border-radius: 12px;
       cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s, transform 0.2s;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     button:hover {
       background-color: #5d4037;
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
     .whatsapp-link {
       display: inline-block;
-      margin-top: 15px;
-      background-color: #25d366;
+      margin-top: 25px;
+      background-color: #25D366;
       color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 15px 30px;
+      border-radius: 14px;
       text-decoration: none;
-      font-weight: bold;
+      box-shadow: 0 4px 12px #25d366aa;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .whatsapp-link:hover {
       background-color: #1ebe5c;
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
-    .success-message {
-      color: green;
-      font-weight: bold;
-      margin-top: 10px;
-      display: none;
+    /* Responsividade */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      main {
+        padding: 30px 20px;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      button, .whatsapp-link {
+        font-size: 1rem;
+        padding: 14px 20px;
+      }
     }
   </style>
 </head>
@@ -109,65 +148,33 @@
   <main>
     <section>
       <h2>🎶 Sobre as Aulas</h2>
-      <p>
-        Olá! Eu sou <strong>Davi Fernandes</strong>, professor com mais de 10 anos de experiência em violão para iniciantes. Vamos juntos aprender acordes básicos, ritmos simples e os fundamentos da música brasileira e gospel. Ensino com paciência, no seu ritmo!
-      </p>
-      <p>
-        <strong>💲 Valor simbólico:</strong> R$25 por mês<br />
-        <strong>🕒 Frequência:</strong> 4 aulas por mês (menos de R$7 por aula!)<br />
-        <strong>🎁 Promoção:</strong> As duas primeiras aulas são <strong>GRÁTIS</strong>! Só começa a pagar a partir da terceira aula.<br />
-        <strong>📍 Local:</strong> Você pode escolher entre ter aulas no meu espaço (ambiente familiar) ou no conforto da sua casa.
-      </p>
-      <p>
-        <strong>🎯 Garantia de resultados:</strong> Em 2 meses garantimos que você já estará tocando pelo menos 3 músicas com segurança.
-      </p>
+      <p>Olá! Eu sou <strong>Davi Fernandes</strong>, professor com mais de 10 anos de experiência em violão para iniciantes. Vamos juntos aprender acordes básicos, ritmos simples e os fundamentos da música brasileira e gospel. Ensino com paciência, no seu ritmo!</p>
+      <p><strong>💲 Valor simbólico:</strong> R$25 por mês<br />
+         <strong>🕒 Frequência:</strong> 4 aulas por mês (menos de R$7 por aula!)<br />
+         <strong>🎁 Promoção:</strong> As duas primeiras aulas são <strong>GRÁTIS</strong>! Só começa a pagar a partir da terceira aula.<br />
+         <strong>📍 Local:</strong> Aulas presenciais em minha residência (ambiente familiar) ou no conforto da sua casa.</p>
+      <p><strong>🎯 Garantia de resultados:</strong> Em 2 meses garantimos que você já estará tocando pelo menos 3 músicas com segurança.</p>
     </section>
-
     <section>
       <h2>📝 Inscrição Rápida</h2>
       <div class="contact">
-        <form action="https://formspree.io/f/xqkrlydo" method="POST">
+        <form action="https://formspree.io/f/mgvygjgp" method="POST">
           <input type="text" name="nome" placeholder="Seu nome" required />
           <input type="email" name="email" placeholder="Seu e-mail" required />
           <input type="tel" name="telefone" placeholder="Seu WhatsApp" required />
           <textarea name="mensagem" placeholder="Fale um pouco sobre sua disponibilidade e local" rows="4"></textarea>
           <button type="submit">Enviar Inscrição</button>
-          <p class="success-message" id="success-message">✅ Inscrição enviada com sucesso!</p>
         </form>
       </div>
     </section>
-
     <section>
       <h2>📞 Contato Direto</h2>
       <p>Se preferir, entre em contato agora mesmo:</p>
-      <p>
-        <strong>WhatsApp:</strong> (21) 96857-6638<br />
-        <strong>Email:</strong> davifernandessrn@gmail.com<br />
-        <strong>Endereço:</strong> Austin, Nova Iguaçu, RJ
-      </p>
-      <a class="whatsapp-link" href="https://wa.me/5521968576638" target="_blank">Chamar no WhatsApp</a>
+      <p><strong>WhatsApp:</strong> (21) 96857-6638<br />
+         <strong>Email:</strong> davifernandessrn@gmail.com<br />
+         <strong>Endereço:</strong> Austin, Nova Iguaçu, RJ</p>
+      <a class="whatsapp-link" href="https://wa.me/5521968576638" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
     </section>
   </main>
-
-  <script>
-    const form = document.querySelector("form");
-    const successMessage = document.getElementById("success-message");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      }).then((response) => {
-        if (response.ok) {
-          successMessage.style.display = "block";
-          form.reset();
-        } else {
-          alert("Houve um erro. Tente novamente mais tarde.");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
