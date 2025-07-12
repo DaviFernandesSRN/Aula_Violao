@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>aprenDAVIolão - Aulas de Violão para Iniciantes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f7ede2, #e0c3fc);
+      margin: 0;
+      padding: 0;
+      color: #3e3e3e;
+    }
+    header {
+      background: linear-gradient(to right, #4e342e, #795548);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #00000044;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #5d4037;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.8;
+    }
+    .contact {
+      background-color: #fbe9e7;
+      padding: 25px;
+      border-radius: 12px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input,
+    textarea {
+      padding: 14px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 14px;
+      background-color: #6d4c41;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #5d4037;
+      transform: scale(1.03);
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .whatsapp-link:hover {
+      background-color: #1ebe5c;
+      transform: scale(1.05);
+    }
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>aprenDAVIolão</h1>
+    <p>🎸 Aulas por Apenas R$25/mês | 4 aulas mensais | 2 primeiras aulas grátis!</p>
+  </header>
+  <main>
+    <section>
+      <h2>🎶 Sobre as Aulas</h2>
+      <p>
+        Olá! Eu sou <strong>Davi Fernandes</strong>, professor com mais de 10 anos de experiência em violão para iniciantes. Vamos juntos aprender acordes básicos, ritmos simples e os fundamentos da música brasileira e gospel. Ensino com paciência, no seu ritmo!
+      </p>
+      <p>
+        <strong>💲 Valor simbólico:</strong> R$25 por mês<br />
+        <strong>🕒 Frequência:</strong> 4 aulas por mês (menos de R$7 por aula!)<br />
+        <strong>🎁 Promoção:</strong> As duas primeiras aulas são <strong>GRÁTIS</strong>! Só começa a pagar a partir da terceira aula.<br />
+        <strong>📍 Local:</strong> Você pode escolher entre ter aulas no meu espaço (ambiente familiar) ou no conforto da sua casa.
+      </p>
+      <p>
+        <strong>🎯 Garantia de resultados:</strong> Em 2 meses garantimos que você já estará tocando pelo menos 3 músicas com segurança.
+      </p>
+    </section>
+
+    <section>
+      <h2>📝 Inscrição Rápida</h2>
+      <div class="contact">
+        <form action="https://formspree.io/f/xqkrlydo" method="POST">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <input type="tel" name="telefone" placeholder="Seu WhatsApp" required />
+          <textarea name="mensagem" placeholder="Fale um pouco sobre sua disponibilidade e local" rows="4"></textarea>
+          <button type="submit">Enviar Inscrição</button>
+          <p class="success-message" id="success-message">✅ Inscrição enviada com sucesso!</p>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h2>📞 Contato Direto</h2>
+      <p>Se preferir, entre em contato agora mesmo:</p>
+      <p>
+        <strong>WhatsApp:</strong> (21) 96857-6638<br />
+        <strong>Email:</strong> davifernandessrn@gmail.com<br />
+        <strong>Endereço:</strong> Austin, Nova Iguaçu, RJ
+      </p>
+      <a class="whatsapp-link" href="https://wa.me/5521968576638" target="_blank">Chamar no WhatsApp</a>
+    </section>
+  </main>
+
+  <script>
+    const form = document.querySelector("form");
+    const successMessage = document.getElementById("success-message");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      }).then((response) => {
+        if (response.ok) {
+          successMessage.style.display = "block";
+          form.reset();
+        } else {
+          alert("Houve um erro. Tente novamente mais tarde.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
