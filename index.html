@@ -3,137 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>aprenDAVIolão - Aulas de Violão para Iniciantes</title>
+  <title>Aprendaviolão - Aulas de Violão para Iniciantes</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #111;
-      line-height: 1.6;
-      padding-bottom: 60px;
-    }
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.25rem;
-      font-weight: 400;
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section + section {
-      margin-top: 60px;
-    }
-    h2 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #111;
-    }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-    .contact {
-      background: #f3f3f3;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea {
-      padding: 16px;
-      font-size: 1rem;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      transition: border-color 0.3s;
-    }
-    input:focus, textarea:focus {
-      border-color: #111;
-      outline: none;
-    }
-    button {
-      background-color: #111;
-      color: #fff;
-      padding: 16px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #333;
-    }
-    .whatsapp-link {
-      display: inline-block;
-      margin-top: 25px;
-      background-color: #25D366;
-      color: white;
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .whatsapp-link:hover {
-      background-color: #1ebe5c;
-      transform: scale(1.05);
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      button, .whatsapp-link {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>aprenDAVIolão</h1>
-    <p>🎸 Aulas por Apenas R$25/mês | 4 aulas mensais | 2 primeiras aulas grátis!</p>
+  <header class="header">
+    <h1 class="titulo">Aprendaviolão</h1>
+    <p class="subtitulo">🎺 Aulas por Apenas R$25/mês | 4 aulas mensais | 2 primeiras aulas grátis!</p>
   </header>
-  <main>
-    <section>
-      <h2>🎶 Sobre as Aulas</h2>
+  <main class="container">
+    <section class="secao">
+      <h2 class="titulo-secao">🎶 Sobre as Aulas</h2>
       <p>Olá! Eu sou <strong>Davi Fernandes</strong>, professor com mais de 10 anos de experiência em violão para iniciantes. Vamos juntos aprender acordes básicos, ritmos simples e os fundamentos da música brasileira e gospel. Ensino com paciência, no seu ritmo!</p>
       <p><strong>💲 Valor simbólico:</strong> R$25 por mês<br>
          <strong>🕒 Frequência:</strong> 4 aulas por mês (menos de R$7 por aula!)<br>
-         <strong>🎁 Promoção:</strong> As duas primeiras aulas são <strong>GRÁTIS</strong>! Só começa a pagar a partir da terceira aula.<br>
+         <strong>🏱 Promoção:</strong> As duas primeiras aulas são <strong>GRÁTIS</strong>! Só começa a pagar a partir da terceira aula.<br>
          <strong>📍 Local:</strong> Aulas presenciais em minha residência (ambiente familiar) ou no conforto da sua casa.</p>
       <p><strong>🎯 Garantia de resultados:</strong> Em 2 meses garantimos que você já estará tocando pelo menos 3 músicas com segurança.</p>
     </section>
 
-    <section>
-      <h2>📝 Inscrição Rápida</h2>
-      <div class="contact">
+    <section class="secao">
+      <h2 class="titulo-secao">📝 Inscrição Rápida</h2>
+      <div class="formulario">
         <form action="https://formspree.io/f/mgvygjgp" method="POST">
           <input type="text" name="nome" placeholder="Seu nome" required>
           <input type="email" name="email" placeholder="Seu e-mail" required>
@@ -144,8 +37,8 @@
       </div>
     </section>
 
-    <section>
-      <h2>📞 Contato Direto</h2>
+    <section class="secao">
+      <h2 class="titulo-secao">📞 Contato Direto</h2>
       <p>Se preferir, entre em contato agora mesmo:</p>
       <p><strong>WhatsApp:</strong> (21) 96857-6638<br>
          <strong>Email:</strong> davifernandessrn@gmail.com<br>
