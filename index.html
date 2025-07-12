@@ -1,98 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>aprenDAVIolão - Aulas de Violão</title>
-
-  <!-- Fontes iguais ao Lovable -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aprenDAVIolão - Aulas de Violão para Iniciantes</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background: #fafafa;
+      background-color: #fff;
       color: #111;
       line-height: 1.6;
+      padding-bottom: 60px;
     }
     header {
-      background: #111;
+      background-color: #111;
       color: #fff;
+      padding: 60px 20px;
       text-align: center;
-      padding: 6rem 1rem;
     }
     header h1 {
       font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 10px;
     }
     header p {
       font-size: 1.25rem;
       font-weight: 400;
-      color: #bbb;
     }
     main {
-      max-width: 720px;
-      margin: -4rem auto 4rem;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      padding: 2rem;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     section + section {
-      margin-top: 3rem;
+      margin-top: 60px;
     }
     h2 {
       font-size: 1.75rem;
       font-weight: 600;
+      margin-bottom: 20px;
       color: #111;
-      margin-bottom: 1rem;
     }
     p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
     }
-    .contact form {
+    .contact {
+      background: #f3f3f3;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
     }
     input, textarea {
-      padding: 1rem;
+      padding: 16px;
       font-size: 1rem;
+      margin-bottom: 16px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      transition: border-color 0.3s;
+    }
+    input:focus, textarea:focus {
+      border-color: #111;
+      outline: none;
     }
     button {
-      background: #111;
+      background-color: #111;
       color: #fff;
-      border: none;
-      padding: 1rem;
+      padding: 16px;
       font-size: 1rem;
+      border: none;
       border-radius: 6px;
       cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
     button:hover {
-      background: #333;
+      background-color: #333;
     }
     .whatsapp-link {
       display: inline-block;
-      margin-top: 2rem;
-      background: #25D366;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
+      margin-top: 25px;
+      background-color: #25D366;
+      color: white;
       font-weight: 600;
+      font-size: 1.1rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .whatsapp-link:hover {
-      background: #1ebe5c;
+      background-color: #1ebe5c;
+      transform: scale(1.05);
     }
     @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      header p, h2, p, button, input, textarea, .whatsapp-link {
-        font-size: 0.95rem;
+      header h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      button, .whatsapp-link {
+        font-size: 1rem;
       }
     }
   </style>
@@ -100,37 +118,38 @@
 <body>
   <header>
     <h1>aprenDAVIolão</h1>
-    <p>🎸 Aulas por apenas R$ 25/mês • 4 aulas mensais • 2 primeiras aulas grátis</p>
+    <p>🎸 Aulas por Apenas R$25/mês | 4 aulas mensais | 2 primeiras aulas grátis!</p>
   </header>
-
   <main>
     <section>
-      <h2>Sobre as aulas</h2>
-      <p>Oi! Eu sou <strong>Davi Fernandes</strong>, professor com mais de 10 anos de experiência em violão para iniciantes. Vamos aprender acordes, ritmos, e os fundamentos da música brasileira e gospel, no seu ritmo e com paciência.</p>
-      <p><strong>💲 Valor:</strong> R$ 25 por mês<br>
-         <strong>🕒 Frequência:</strong> 4 aulas/mês (< R$ 7/aula)<br>
-         <strong>🎁 Promoção:</strong> As 2 primeiras aulas são <strong>GRÁTIS</strong>! Só comece a pagar da 3ª aula.<br>
-         <strong>📍 Local:</strong> Você escolhe: na minha casa (ambiente familiar) ou no conforto da sua.</p>
-      <p><strong>🎯 Garantia:</strong> Em 2 meses, você estará tocando pelo menos 3 músicas com segurança.</p>
-    </section>
-
-    <section class="contact">
-      <h2>Inscrição rápida</h2>
-      <form action="https://formspree.io/f/mgvygjgp" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e‑mail" required>
-        <input type="tel" name="telefone" placeholder="Seu WhatsApp" required>
-        <textarea name="mensagem" rows="4" placeholder="Disponibilidade, local, etc"></textarea>
-        <button type="submit">Enviar Inscrição</button>
-      </form>
+      <h2>🎶 Sobre as Aulas</h2>
+      <p>Olá! Eu sou <strong>Davi Fernandes</strong>, professor com mais de 10 anos de experiência em violão para iniciantes. Vamos juntos aprender acordes básicos, ritmos simples e os fundamentos da música brasileira e gospel. Ensino com paciência, no seu ritmo!</p>
+      <p><strong>💲 Valor simbólico:</strong> R$25 por mês<br>
+         <strong>🕒 Frequência:</strong> 4 aulas por mês (menos de R$7 por aula!)<br>
+         <strong>🎁 Promoção:</strong> As duas primeiras aulas são <strong>GRÁTIS</strong>! Só começa a pagar a partir da terceira aula.<br>
+         <strong>📍 Local:</strong> Aulas presenciais em minha residência (ambiente familiar) ou no conforto da sua casa.</p>
+      <p><strong>🎯 Garantia de resultados:</strong> Em 2 meses garantimos que você já estará tocando pelo menos 3 músicas com segurança.</p>
     </section>
 
     <section>
-      <h2>Contato direto</h2>
-      <p>Prefere falar diretamente? Me chama:</p>
-      <p><strong>📞 WhatsApp:</strong> (21) 96857‑6638<br>
-         <strong>📧 Email:</strong> davifernandessrn@gmail.com<br>
-         <strong>📍 Local:</strong> Austin, Nova Iguaçu, RJ</p>
+      <h2>📝 Inscrição Rápida</h2>
+      <div class="contact">
+        <form action="https://formspree.io/f/mgvygjgp" method="POST">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <input type="tel" name="telefone" placeholder="Seu WhatsApp" required>
+          <textarea name="mensagem" placeholder="Fale um pouco sobre sua disponibilidade e local" rows="4"></textarea>
+          <button type="submit">Enviar Inscrição</button>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h2>📞 Contato Direto</h2>
+      <p>Se preferir, entre em contato agora mesmo:</p>
+      <p><strong>WhatsApp:</strong> (21) 96857-6638<br>
+         <strong>Email:</strong> davifernandessrn@gmail.com<br>
+         <strong>Endereço:</strong> Austin, Nova Iguaçu, RJ</p>
       <a class="whatsapp-link" href="https://wa.me/5521968576638" target="_blank">Chamar no WhatsApp</a>
     </section>
   </main>
