@@ -1,0 +1,115 @@
+
+:root {
+  --primary: #111;
+  --accent: #25D366;
+  --bg-light: #f3f3f3;
+  --radius: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: var(--primary);
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+section + section {
+  margin-top: 60px;
+}
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+.contact {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: var(--radius);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  padding: 16px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  transition: border-color 0.3s;
+}
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #333;
+}
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.whatsapp-link:hover {
+  background-color: #1ebe5c;
+  transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  button,
+  .whatsapp-link {
+    font-size: 1rem;
+  }
+}
